@@ -9,30 +9,18 @@
 </head>
 <body>
   <aside class="sidebar">
-    <a class="identity" href="index.html" aria-label="Yuanfan Li, home">
-      <img src="profile_new.jpg" alt="Portrait of Yuanfan Li" />
-      <span class="identity-name">Yuanfan Li</span><span lang="zh-CN">李远凡</span>
-    </a>
-    <p class="sidebar-role">Ph.D. Student<br />The University of Sydney</p>
+    <a class="site-name" href="index.html">Yuanfan Li</a>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
-      <a class="active" aria-current="page" href="publications.html">Publications</a>
+      <a class="active" aria-current="page" href="papers.html">Papers</a>
       <a href="assets/CV_Yuanfan_Li.pdf">CV</a>
-    </nav>
-    <nav class="social-links" aria-label="Profile links">
-      <a href="mailto:yuli0846@uni.sydney.edu.au">Email</a>
-      <a href="https://scholar.google.com/citations?user=XxHOIxkAAAAJ">Scholar</a>
-      <a href="https://github.com/YuanfanLi2233">GitHub</a>
-      <a href="https://www.linkedin.com/in/yuanfan-li-424999355/">LinkedIn</a>
     </nav>
   </aside>
 
   <main class="content">
     <header class="page-header">
-      <p class="eyebrow">Publications</p>
-      <h1>Papers &amp; preprints</h1>
-      <p class="page-intro">Each work currently includes the paper and, where available, its poster.</p>
+      <h1>Papers</h1>
     </header>
 
     <section class="publication-group">
@@ -42,6 +30,17 @@
         <p class="authors">Joel Wills, <strong>Yuanfan Li</strong>, Yiming Ying, and Ding-Xuan Zhou.</p>
         <p><em>Preprint, 2026.</em></p>
         <p class="resource-links"><a href="https://arxiv.org/abs/2610.25856">Paper</a></p>
+        <details class="paper-details"><summary>What are the fundamental limits of DPO when the Bradley-Terry model is misspecified?</summary>
+          <p>
+            We introduce the triangle-curl of preference log-odds to measure local violations of
+            the Bradley-Terry structure. This identifies a structural source of error that cannot
+            be eliminated simply by scaling the model or collecting more data.
+          </p>
+          <ul class="key-points">
+            <li>Characterizes preference misspecification through cyclic inconsistency over item triples.</li>
+            <li>Separates structural misspecification, neural-network approximation, and finite-sample estimation.</li>
+          </ul>
+        </details>
       </article>
     </section>
 
@@ -52,18 +51,52 @@
         <p class="authors"><strong>Yuanfan Li</strong>, Zihan Zhang, Yiming Ying, and Ding-Xuan Zhou.</p>
         <p><strong>NeurIPS 2026.</strong></p>
         <p class="resource-links"><a href="https://arxiv.org/abs/2610.15388">Paper</a><a href="assets/posters/crl-approximation.pdf">Poster</a></p>
+        <details class="paper-details"><summary>Why can low-dimensional inner-product embeddings capture complex cross-modal relationships?</summary>
+          <p>
+            We connect the population contrastive objective to pointwise mutual information (PMI)
+            and show that representation dimension is governed by the spectral approximability of
+            this dependence structure. The framework explains when compact embeddings are enough
+            and how structured data models can lead to fast approximation.
+          </p>
+          <ul class="key-points">
+            <li>Relates the optimal contrastive score to a low-rank spectral approximation of PMI.</li>
+            <li>Links data structure, embedding dimension, and approximation error, with downstream retrieval calibration.</li>
+          </ul>
+        </details>
       </article>
       <article class="publication">
         <h3>Statistical Consistency and Generalization of Contrastive Representation Learning</h3>
         <p class="authors"><strong>Yuanfan Li</strong>, Xiyuan Wei, Tianbao Yang, and Yiming Ying.</p>
         <p><strong>ICML 2026.</strong></p>
         <p class="resource-links"><a href="https://arxiv.org/abs/2605.02116">Paper</a><a href="assets/posters/crl-consistency.pdf">Poster</a></p>
+        <details class="paper-details"><summary>Why does contrastive pretraining support effective retrieval, and why do more negative samples help?</summary>
+          <p>
+            We establish a statistical bridge from the contrastive pretraining objective to optimal
+            downstream retrieval. The analysis also quantifies how negative sampling enters the
+            generalization error, explaining both its benefit and its interaction with sample size.
+          </p>
+          <ul class="key-points">
+            <li>Proves consistency and calibration results connecting the learned score to retrieval decisions.</li>
+            <li>Derives generalization bounds that improve with the number of negative samples.</li>
+          </ul>
+        </details>
       </article>
       <article class="publication">
         <h3>Optimal Rates for Generalization of Gradient Descent for Deep ReLU Classification</h3>
         <p class="authors"><strong>Yuanfan Li</strong>, Yunwen Lei, Zheng-Chu Guo, and Yiming Ying.</p>
         <p><strong>NeurIPS 2025.</strong></p>
         <p class="resource-links"><a href="https://arxiv.org/abs/2510.02779">Paper</a><a href="assets/posters/deep-relu.pdf">Poster</a></p>
+        <details class="paper-details"><summary>Can gradient descent attain optimal statistical learning rates in deep neural networks?</summary>
+          <p>
+            Under NTK separability, we obtain a near-optimal excess-risk rate in sample size for
+            gradient descent on deep ReLU classifiers. The analysis keeps the dependence on depth
+            polynomial rather than exponential by controlling how activation patterns evolve.
+          </p>
+          <ul class="key-points">
+            <li>Establishes a near-optimal sample-size rate with explicit margin dependence.</li>
+            <li>Uses refined activation-pattern and complexity arguments to control deep-network generalization.</li>
+          </ul>
+        </details>
       </article>
     </section>
 

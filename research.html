@@ -9,26 +9,18 @@
 </head>
 <body>
   <aside class="sidebar">
-    <a class="identity" href="index.html" aria-label="Yuanfan Li, home">
-      <img src="profile_new.jpg" alt="Portrait of Yuanfan Li" />
-      <span class="identity-name">Yuanfan Li</span><span lang="zh-CN">李远凡</span>
-    </a>
-    <p class="sidebar-role">Ph.D. Student<br />The University of Sydney</p>
+    <a class="site-name" href="index.html">Yuanfan Li</a>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a class="active" aria-current="page" href="research.html">Research</a>
-      <a href="publications.html">Publications</a>
+      <a href="papers.html">Papers</a>
       <a href="assets/CV_Yuanfan_Li.pdf">CV</a>
-    </nav>
-    <nav class="social-links" aria-label="Profile links">
-      <a href="mailto:yuli0846@uni.sydney.edu.au">Email</a>
-      <a href="https://scholar.google.com/citations?user=XxHOIxkAAAAJ">Scholar</a>
-      <a href="https://github.com/YuanfanLi2233">GitHub</a>
-      <a href="https://www.linkedin.com/in/yuanfan-li-424999355/">LinkedIn</a>
     </nav>
   </aside>
 
 
+  <main class="content">
+    <header class="page-header"><h1>Research</h1></header>
     <section class="research-area">
       <h2>Representation Learning</h2>
       <p>
@@ -47,8 +39,8 @@
         I investigate how optimization dynamics translate into statistical guarantees for deep
         networks. My published work analyzes gradient descent for deep ReLU classification and
         obtains near-optimal sample-size rates with polynomial depth dependence. Recently,
-        I am focusing on quantized neural networks, studying how
-        the quantization affects the optimization and genearalization of neural networks.
+        I have been focusing on quantized neural networks, studying how
+        quantization affects the optimization and generalization of neural networks.
       </p>
       <ul class="topic-tags"><li>gradient descent</li><li>deep ReLU networks</li><li>optimal rates</li><li>quantization</li><li>straight-through estimators</li></ul>
     </section>
@@ -60,84 +52,12 @@
         model, even though real human preferences may be cyclic or otherwise incompatible with
         that assumption. I study the statistical consequences of this mismatch and how they
         interact with model approximation and finite data. More broadly, I am interested in the
-        mathematical machnism underlying the success of reasoning models.
+        mathematical mechanisms underlying the success of reasoning models.
       </p>
       <ul class="topic-tags"><li>DPO</li><li>preference misspecification</li><li>alignment</li><li>post-training</li></ul>
     </section>
 
-    <section>
-      <div class="section-heading"><h2>Selected work</h2><a href="papers.html">All publications →</a></div>
-      <div class="project-list">
-        <article class="project">
-          <p class="venue">Preprint · 2026</p>
-          <h3>Statistical Learning Theory for Direct Preference Optimization</h3>
-          <p class="authors">Joel Wills, <strong>Yuanfan Li</strong>, Yiming Ying, and Ding-Xuan Zhou.</p>
-          <p class="project-question">What are the fundamental limits of DPO when the Bradley-Terry model is misspecified?</p>
-          <p>
-            We introduce the triangle-curl of preference log-odds to measure local violations of
-            the Bradley-Terry structure. This identifies a structural source of error that cannot
-            be eliminated simply by scaling the model or collecting more data.
-          </p>
-          <ul class="key-points">
-            <li>Characterizes preference misspecification through cyclic inconsistency over item triples.</li>
-            <li>Separates structural misspecification, neural-network approximation, and finite-sample estimation.</li>
-          </ul>
-          <p class="resource-links"><a href="https://arxiv.org/abs/2610.25856">Paper</a></p>
-        </article>
-
-        <article class="project">
-          <p class="venue">NeurIPS 2026</p>
-          <h3>Approximation in Contrastive Representation Learning</h3>
-          <p class="authors"><strong>Yuanfan Li</strong>, Zihan Zhang, Yiming Ying, and Ding-Xuan Zhou.</p>
-          <p class="project-question">Why can low-dimensional inner-product embeddings capture complex cross-modal relationships?</p>
-          <p>
-            We connect the population contrastive objective to pointwise mutual information (PMI)
-            and show that representation dimension is governed by the spectral approximability of
-            this dependence structure. The framework explains when compact embeddings are enough
-            and how structured data models can lead to fast approximation.
-          </p>
-          <ul class="key-points">
-            <li>Relates the optimal contrastive score to a low-rank spectral approximation of PMI.</li>
-            <li>Links data structure, embedding dimension, and approximation error, with downstream retrieval calibration.</li>
-          </ul>
-          <p class="resource-links"><a href="https://arxiv.org/abs/2610.15388">Paper</a><a href="assets/posters/crl-approximation.pdf">Poster</a></p>
-        </article>
-
-        <article class="project">
-          <p class="venue">ICML 2026</p>
-          <h3>Statistical Consistency and Generalization of Contrastive Representation Learning</h3>
-          <p class="authors"><strong>Yuanfan Li</strong>, Xiyuan Wei, Tianbao Yang, and Yiming Ying.</p>
-          <p class="project-question">Why does contrastive pretraining support effective retrieval, and why do more negative samples help?</p>
-          <p>
-            We establish a statistical bridge from the contrastive pretraining objective to optimal
-            downstream retrieval. The analysis also quantifies how negative sampling enters the
-            generalization error, explaining both its benefit and its interaction with sample size.
-          </p>
-          <ul class="key-points">
-            <li>Proves consistency and calibration results connecting the learned score to retrieval decisions.</li>
-            <li>Derives generalization bounds that improve with the number of negative samples.</li>
-          </ul>
-          <p class="resource-links"><a href="https://arxiv.org/abs/2605.02116">Paper</a><a href="assets/posters/crl-consistency.pdf">Poster</a></p>
-        </article>
-
-        <article class="project">
-          <p class="venue">NeurIPS 2025</p>
-          <h3>Optimal Rates for Generalization of Gradient Descent for Deep ReLU Classification</h3>
-          <p class="authors"><strong>Yuanfan Li</strong>, Yunwen Lei, Zheng-Chu Guo, and Yiming Ying.</p>
-          <p class="project-question">Can gradient descent attain optimal statistical learning rates in deep neural networks?</p>
-          <p>
-            Under NTK separability, we obtain a near-optimal excess-risk rate in sample size for
-            gradient descent on deep ReLU classifiers. The analysis keeps the dependence on depth
-            polynomial rather than exponential by controlling how activation patterns evolve.
-          </p>
-          <ul class="key-points">
-            <li>Establishes a near-optimal sample-size rate with explicit margin dependence.</li>
-            <li>Uses refined activation-pattern and complexity arguments to control deep-network generalization.</li>
-          </ul>
-          <p class="resource-links"><a href="https://arxiv.org/abs/2510.02779">Paper</a><a href="assets/posters/deep-relu.pdf">Poster</a></p>
-        </article>
-      </div>
-    </section>
+    <p class="papers-link">See <a href="papers.html">Papers</a> for my work and its main results.</p>
 
     <footer>Last updated November 2026.</footer>
   </main>
